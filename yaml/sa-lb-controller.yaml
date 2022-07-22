@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  labels:
+    app.kubernetes.io/component: controller
+    app.kubernetes.io/name: aws-load-balancer-controller
+  name: aws-load-balancer-controller
+  namespace: kube-system
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::939067403664:role/role-an2-hq-dev-ekssa-aws-load-balancer-controller
+  # eks.amazonaws.com/role-arn: arn:aws:iam::[aws-account-id]:role/[iam-role-name]
+  # [aws-account-id]: AWS Account ID
+  # [iam-role-name]: AWS LB Controller 용 Service Account 를 위한 IAM Role 이름
+
